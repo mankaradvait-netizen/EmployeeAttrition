@@ -1,0 +1,3 @@
+## 2025-05-18 - Nested Parallelism CPU Contention in scikit-learn
+**Learning:** Setting `n_jobs=-1` on both `GridSearchCV` and an ensemble estimator like `RandomForestClassifier` creates nested parallelism (N_jobs_outer × N_jobs_inner threads/processes). On multi-core CPUs, this over-subscribes CPU resources, causing heavy context switching and lock contention, making execution ~36% slower than outer-only parallel execution (`GridSearchCV(n_jobs=-1)` + `RandomForestClassifier(n_jobs=1)`).
+**Action:** Always set inner estimator `n_jobs=1` when wrapping it in outer parallel search like `GridSearchCV(n_jobs=-1)`.
