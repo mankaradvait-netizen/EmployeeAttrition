@@ -1,0 +1,24 @@
+# Secrets and Credentials
+*.env
+.env*
+kaggle.json
+*.pem
+*.key
+id_rsa
+id_ed25519
+
+# Python / Environment
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# System Files
+.DS_Store
+Thumbs.db
