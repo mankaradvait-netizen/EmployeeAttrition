@@ -1,0 +1,3 @@
+# Sentinel Security Journal
+
+CRITICAL SECURITY LEARNINGS ONLY.
